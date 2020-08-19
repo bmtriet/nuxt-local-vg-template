@@ -13,7 +13,7 @@
     "@nuxtjs/axios": "^5.11.0",
     "dayjs": "^1.8.29",
     "exceljs": "^3.8.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "nuxt": "^2.13.0",
     "nuxt-material-design-icons": "^1.0.4",
     "nuxt-vuex-localstorage": "^1.2.6",
