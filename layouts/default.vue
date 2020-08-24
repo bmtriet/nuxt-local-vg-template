@@ -13,9 +13,9 @@
                         </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <VDivider v-show="l.divider"></VDivider>
+                <v-divider v-show="l.divider"></v-divider>
             </div>
-            <VDivider></VDivider>
+            <v-divider></v-divider>
             <v-list-item link @click="logout">
                 <v-list-item-action>
                     <v-icon>mdi-logout-variant</v-icon>
@@ -29,9 +29,9 @@
         </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app color="cyan" dark>
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <v-toolbar-title>APP QUẢN LÝ CNV NHÀ THẦU PHỤ - VG</v-toolbar-title>
+    <v-app-bar app color="cyan" dark hide-on-scroll="">
+        <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
+        <v-toolbar-title>VG-CHAT ROOM</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -39,7 +39,7 @@
     </v-main>
     <v-footer padless style="opacity: 0.8">
         <v-col col="12" class="text-right m0 p0">
-            <small>&copy; {{ new Date().getFullYear() }} VG Sub Contract Database Management | HR Project team</small>
+            <small>&copy; {{ new Date().getFullYear() }} VG Chat | HR Project team</small>
         </v-col>
     </v-footer>
 </v-app>

@@ -14,7 +14,7 @@ export default {
     },
     data() {
         return {
-            api: 'http://10.1.16.84/api/subContractApi/',
+            api: 'http://10.1.16.84/api/vgchatApi/',
         }
     },
     methods: {

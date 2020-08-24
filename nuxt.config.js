@@ -1,16 +1,25 @@
 import colors from 'vuetify/es5/util/colors'
-
+const fs = require('fs')
+import path from 'path'
 export default {
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
+  server: {
+    port: 3000, // default: 3000
+    host: 'hr051.cansportsvg.com', // default: localhost
+    https: {
+      key: fs.readFileSync(path.resolve(__dirname, 'server/node.key')),
+      cert: fs.readFileSync(path.resolve(__dirname, 'server/node.crt'))
+    }
+  },
   mode: 'spa',
   router: {
-    base: '/tools/sub-contract',
+    base: '/vgchat',
   },
   generate: {
-    dir: '../../tools/sub-contract',
+    dir: '../vgchat',
   },
   /*
   ** Nuxt target
@@ -63,9 +72,21 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'nuxtjs-mdi-font'
+    'nuxtjs-mdi-font',
+    'nuxt-socket-io'
     // 'nuxt-vuex-localstorage'
   ],
+  io: {
+    sockets: [
+      { // At least one entry is required
+        name: 'home',
+        url: 'https://hr051.cansportsvg.com:2020',
+        default: true,
+        vuex: { /* see section below */ },
+        namespaces: { /* see section below */ }
+      }, 
+    ]
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

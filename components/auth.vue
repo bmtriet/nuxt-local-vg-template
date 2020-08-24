@@ -7,7 +7,7 @@ export default {
     },
     beforeMount() {
         if (process.client) {
-            if (this.$session.get('subContract') === undefined) {
+            if (this.$session.get('vgchat') === undefined) {
                 this.$router.push('/');
                 console.log('failed');
             } else {
