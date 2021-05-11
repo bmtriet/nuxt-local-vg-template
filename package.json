@@ -15,7 +15,7 @@
     "exceljs": "^3.8.1",
     "express": "^4.15.2",
     "fs": "0.0.1-security",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "nuxt": "^2.14.3",
     "nuxt-material-design-icons": "^1.0.4",
     "nuxt-socket-io": "^1.1.8",
